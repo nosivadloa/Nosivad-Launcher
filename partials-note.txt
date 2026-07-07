@@ -1,3 +1,0 @@
-This static wiki intentionally uses duplicated header/sidebar markup in each
-HTML file so it can be hosted by any plain static web server without a build
-step. When a web framework is chosen, these shared pieces can become templates.
