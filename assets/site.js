@@ -1,13 +1,13 @@
 const pages = [
   ["index.html", "Home", "Nosivad overview, shard goals, quick links"],
   ["download.html", "Download Launcher", "Launcher installer, setup steps, release links"],
-  ["getting-started.html", "Getting Started", "Eldeir Village, first hour, guide, starter bounties"],
+  ["getting-started.html", "Getting Started", "Eldeir Village, first hour, Mira guide, starter hunt-and-gather path"],
   ["adventurer-levels.html", "Adventurer Levels", "Player levels, public grades, XP sources"],
   ["rifts.html", "Planar Rifts", "Static rift anchors, waves, affixes, regional themes"],
   ["breach-gates.html", "Breach Gates", "Instanced dungeon-style portals, E through S grades"],
   ["world-bosses.html", "World Bosses", "Rare breach events, random bosses, five-day despawn"],
   ["creatures.html", "Creatures", "Enemy rarity, mutations, creature families"],
-  ["loot-relics.html", "Loot and Relics", "Dynamic loot, graded gear, relic templates"],
+  ["loot-relics.html", "Loot and Relics", "Dynamic loot, gear rolls, graded gear, relic templates"],
   ["shrines-lore.html", "God Shrines and Lore", "Shrine blessings, deity dedications, shard lore"],
   ["bounties.html", "Bounty Boards", "Contracts, rewards, progression hooks"],
   ["reference.html", "Reference", "Templates, terms, launch notes"]
