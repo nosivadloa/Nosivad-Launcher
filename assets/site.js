@@ -3,7 +3,7 @@ const pages = [
   ["getting-started.html", "Getting Started", "Eldeir Village, first hour, guide, starter bounties"],
   ["adventurer-levels.html", "Adventurer Levels", "Player levels, public grades, XP sources"],
   ["rifts.html", "Planar Rifts", "Static rift anchors, waves, affixes, regional themes"],
-  ["world-bosses.html", "World Bosses", "Rare breach events, random bosses, five-day despawn"],
+  ["world-bosses.html", "World Bosses", "Rare rift events, random bosses, five-day despawn"],
   ["creatures.html", "Creatures", "Enemy rarity, mutations, creature families"],
   ["loot-relics.html", "Loot and Relics", "Dynamic loot, graded gear, relic templates"],
   ["shrines-lore.html", "God Shrines and Lore", "Shrine blessings, deity dedications, shard lore"],
