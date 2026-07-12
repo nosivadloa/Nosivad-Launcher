@@ -3,7 +3,6 @@ const pages = [
   ["getting-started.html", "Getting Started", "Eldeir Village, first hour, guide, starter bounties"],
   ["adventurer-levels.html", "Adventurer Levels", "Player levels, public grades, XP sources"],
   ["rifts.html", "Planar Rifts", "Static rift anchors, waves, affixes, regional themes"],
-  ["breach-gates.html", "Breach Gates", "Instanced dungeon-style portals, E through S grades"],
   ["world-bosses.html", "World Bosses", "Rare breach events, random bosses, five-day despawn"],
   ["creatures.html", "Creatures", "Enemy rarity, mutations, creature families"],
   ["loot-relics.html", "Loot and Relics", "Dynamic loot, graded gear, relic templates"],
@@ -24,6 +23,10 @@ function markActiveNav() {
       link.classList.add("active");
     }
   });
+}
+
+function removeUnpublishedPages() {
+  document.querySelectorAll('a[href="breach-gates.html"]').forEach((link) => link.remove());
 }
 
 function setupSearch() {
@@ -64,6 +67,7 @@ function setupSearch() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+  removeUnpublishedPages();
   markActiveNav();
   setupSearch();
 });
