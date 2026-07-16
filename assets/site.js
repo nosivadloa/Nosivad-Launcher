@@ -36,7 +36,7 @@ function ensureCommunityNav() {
 
   const links = [
     ["https://nosivadloa.github.io/Nosivad-Launcher/download.html", "Download Launcher"],
-    ["https://discord.gg/TY5kQ62p9", "Join Discord"]
+    ["https://discord.gg/bffDZJNQ9c", "Join Discord"]
   ];
 
   links.forEach(([href, label]) => {
