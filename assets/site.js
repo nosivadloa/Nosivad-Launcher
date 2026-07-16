@@ -1,5 +1,6 @@
 const pages = [
   ["index.html", "Home", "Nosivad overview, shard goals, quick links"],
+  ["https://nosivadloa.github.io/Nosivad-Launcher/download.html", "Download Launcher", "Launcher installer, portable zip, and setup steps"],
   ["getting-started.html", "Getting Started", "Eldeir Village, first hour, guide, starter bounties"],
   ["adventurer-levels.html", "Adventurer Levels", "Player levels, public grades, XP sources"],
   ["rifts.html", "Planar Rifts", "Static rift anchors, waves, affixes, regional themes"],
@@ -27,6 +28,25 @@ function markActiveNav() {
 
 function removeUnpublishedPages() {
   document.querySelectorAll('a[href="breach-gates.html"]').forEach((link) => link.remove());
+}
+
+function ensureCommunityNav() {
+  const navPanel = document.querySelector(".nav-panel");
+  if (!navPanel) return;
+
+  const links = [
+    ["https://nosivadloa.github.io/Nosivad-Launcher/download.html", "Download Launcher"],
+    ["https://discord.gg/TY5kQ62p9", "Join Discord"]
+  ];
+
+  links.forEach(([href, label]) => {
+    if (navPanel.querySelector(`a[href="${href}"]`)) return;
+
+    const anchor = document.createElement("a");
+    anchor.href = href;
+    anchor.textContent = label;
+    navPanel.appendChild(anchor);
+  });
 }
 
 function setupSearch() {
@@ -68,6 +88,7 @@ function setupSearch() {
 
 document.addEventListener("DOMContentLoaded", () => {
   removeUnpublishedPages();
+  ensureCommunityNav();
   markActiveNav();
   setupSearch();
 });
