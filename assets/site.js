@@ -3,6 +3,7 @@ const pages = [
   ["download.html", "Download Launcher", "Launcher installer, setup steps, release links"],
   ["getting-started.html", "Getting Started", "Eldeir Village, first hour, Mira guide, starter hunt-and-gather path"],
   ["adventurer-levels.html", "Adventurer Levels", "Player levels, public grades, XP sources"],
+  ["skills-stats.html", "Skills, Stats and Mana", "Skill caps, stat caps, Channeling, Focus, mana regeneration, Intelligence, Wisdom, magic resistance"],
   ["rifts.html", "Planar Rifts", "Static rift anchors, waves, affixes, regional themes"],
   ["breach-gates.html", "Rift Breach Expeditions", "E through S dungeons, sigils, waves, timers, caches"],
   ["regional-events.html", "Regional Events", "Local events, enemy families, resources, bosses, rewards"],
@@ -39,6 +40,19 @@ function ensureRegionalEventsNav() {
 
   const worldBossLink = navPanel.querySelector('a[href="world-bosses.html"]');
   navPanel.insertBefore(anchor, worldBossLink || null);
+}
+
+function ensureSkillsStatsNav() {
+  const navPanel = document.querySelector(".nav-panel");
+  if (!navPanel || navPanel.querySelector('a[href="skills-stats.html"]')) return;
+
+  const anchor = document.createElement("a");
+  anchor.href = "skills-stats.html";
+  anchor.setAttribute("data-nav", "");
+  anchor.textContent = "Skills, Stats and Mana";
+
+  const levelsLink = navPanel.querySelector('a[href="adventurer-levels.html"]');
+  levelsLink?.insertAdjacentElement("afterend", anchor);
 }
 
 function ensureCommunityNav() {
@@ -99,6 +113,7 @@ function setupSearch() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+  ensureSkillsStatsNav();
   ensureRegionalEventsNav();
   ensureCommunityNav();
   markActiveNav();
