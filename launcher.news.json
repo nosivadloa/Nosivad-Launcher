@@ -1,0 +1,20 @@
+{
+  "news": [
+    {
+      "title": "Rift Breach Expeditions",
+      "body": "E through S-grade Breaches are live with populated rooms, hidden bosses, timers, cache choices, and grade-matched admission sigils. Use /breach for status."
+    },
+    {
+      "title": "Regional Events",
+      "body": "Eight regions now feature distinct local events, enemy families, resources, bosses, and rewards. Use /events to see what is active and where."
+    },
+    {
+      "title": "Breach Sigil Compensation",
+      "body": "Players who completed sigil-awarding contracts before the update receive their missing sigils automatically when they log in."
+    },
+    {
+      "title": "Server Address",
+      "body": "Use nosivad.bounceme.net at the Legends of Aria Eternal server login screen."
+    }
+  ]
+}
