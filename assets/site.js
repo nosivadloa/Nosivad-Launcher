@@ -9,7 +9,7 @@ const pages = [
   ["regional-events.html", "Regional Events", "Local events, enemy families, resources, bosses, rewards"],
   ["world-bosses.html", "World Bosses", "Rare breach events, random bosses, five-day despawn"],
   ["creatures.html", "Creatures", "Enemy rarity, mutations, creature families"],
-  ["loot-relics.html", "Loot and Relics", "Dynamic loot, graded gear, Arcane Recycler, Planar Forge, salvage skills, materials, relic awakening"],
+  ["loot-relics.html", "Loot and Relics", "Dynamic loot, Arcane Recycler, Arcane Anvil, Arcane Toolkit, Planar Forge, salvage skills, relic awakening"],
   ["shrines-lore.html", "God Shrines and Lore", "Shrine blessings, deity dedications, shard lore"],
   ["bounties.html", "Bounty Boards", "Contracts, rewards, progression hooks"],
   ["reference.html", "Reference", "Templates, terms, launch notes"]
