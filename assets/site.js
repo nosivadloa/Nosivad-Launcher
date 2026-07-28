@@ -12,6 +12,7 @@ const pages = [
   ["loot-relics.html", "Loot and Relics", "Dynamic loot, Arcane Recycler, Arcane Anvil, Arcane Toolkit, Planar Forge, salvage skills, relic awakening"],
   ["shrines-lore.html", "God Shrines and Lore", "Shrine blessings, deity dedications, shard lore"],
   ["bounties.html", "Bounty Boards", "Contracts, rewards, progression hooks"],
+  ["roadmap.html", "Development Roadmap", "Current priorities, active development, future dungeons, professions, guilds, story, events, collections"],
   ["reference.html", "Reference", "Templates, terms, launch notes"]
 ];
 
@@ -53,6 +54,19 @@ function ensureSkillsStatsNav() {
 
   const levelsLink = navPanel.querySelector('a[href="adventurer-levels.html"]');
   levelsLink?.insertAdjacentElement("afterend", anchor);
+}
+
+function ensureRoadmapNav() {
+  const navPanel = document.querySelector(".nav-panel");
+  if (!navPanel || navPanel.querySelector('a[href="roadmap.html"]')) return;
+
+  const anchor = document.createElement("a");
+  anchor.href = "roadmap.html";
+  anchor.setAttribute("data-nav", "");
+  anchor.textContent = "Roadmap";
+
+  const referenceLink = navPanel.querySelector('a[href="reference.html"]');
+  navPanel.insertBefore(anchor, referenceLink || null);
 }
 
 function ensureCommunityNav() {
@@ -115,6 +129,7 @@ function setupSearch() {
 document.addEventListener("DOMContentLoaded", () => {
   ensureSkillsStatsNav();
   ensureRegionalEventsNav();
+  ensureRoadmapNav();
   ensureCommunityNav();
   markActiveNav();
   setupSearch();
