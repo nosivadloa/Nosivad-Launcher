@@ -11,6 +11,7 @@ const pages = [
   ["creatures.html", "Creatures", "Enemy rarity, mutations, creature families"],
   ["loot-relics.html", "Loot and Relics", "Dynamic loot, Arcane Recycler, Arcane Anvil, Arcane Toolkit, Planar Forge, salvage skills, relic awakening"],
   ["shrines-lore.html", "God Shrines and Lore", "Shrine blessings, deity dedications, shard lore"],
+  ["story-discovery.html", "Story and Discovery", "The Unseen Thread, journals, environmental clues, rumors, Pip, persistent investigations, world consequences"],
   ["bounties.html", "Bounty Boards", "Contracts, rewards, progression hooks"],
   ["roadmap.html", "Development Roadmap", "Current priorities, active development, future dungeons, professions, guilds, story, events, collections"],
   ["reference.html", "Reference", "Templates, terms, launch notes"]
@@ -54,6 +55,17 @@ function ensureSkillsStatsNav() {
 
   const levelsLink = navPanel.querySelector('a[href="adventurer-levels.html"]');
   levelsLink?.insertAdjacentElement("afterend", anchor);
+}
+
+function ensureStoryNav() {
+  const navPanel = document.querySelector(".nav-panel");
+  if (!navPanel || navPanel.querySelector('a[href="story-discovery.html"]')) return;
+  const anchor = document.createElement("a");
+  anchor.href = "story-discovery.html";
+  anchor.setAttribute("data-nav", "");
+  anchor.textContent = "Story and Discovery";
+  const bountyLink = navPanel.querySelector('a[href="bounties.html"]');
+  navPanel.insertBefore(anchor, bountyLink || null);
 }
 
 function ensureRoadmapNav() {
@@ -129,6 +141,7 @@ function setupSearch() {
 document.addEventListener("DOMContentLoaded", () => {
   ensureSkillsStatsNav();
   ensureRegionalEventsNav();
+  ensureStoryNav();
   ensureRoadmapNav();
   ensureCommunityNav();
   markActiveNav();
