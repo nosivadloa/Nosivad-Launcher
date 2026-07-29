@@ -6,7 +6,7 @@ const pages = [
   ["skills-stats.html", "Skills, Stats and Mana", "Skill caps, stat caps, Channeling, Focus, mana regeneration, Intelligence, Wisdom, magic resistance"],
   ["rifts.html", "Planar Rifts", "Static rift anchors, waves, affixes, regional themes"],
   ["breach-gates.html", "Rift Breach Expeditions", "E through S dungeons, sigils, waves, timers, caches"],
-  ["regional-events.html", "Regional Events", "Local events, enemy families, resources, bosses, rewards"],
+  ["regional-events.html", "Regional Events", "Invasions, escorts, corrupted resource surges, shrine defenses, roaming elites, multi-stage rifts, objectives, rewards"],
   ["world-bosses.html", "World Bosses", "Rare breach events, random bosses, five-day despawn"],
   ["creatures.html", "Creatures", "Enemy rarity, mutations, creature families"],
   ["loot-relics.html", "Loot and Relics", "Dynamic loot, Arcane Recycler, Arcane Anvil, Arcane Toolkit, Planar Forge, salvage skills, relic awakening"],
