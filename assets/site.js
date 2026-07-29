@@ -3,16 +3,17 @@ const pages = [
   ["download.html", "Download Launcher", "Launcher installer, setup steps, release links"],
   ["getting-started.html", "Getting Started", "Eldeir Village, first hour, Mira guide, starter hunt-and-gather path"],
   ["adventurer-levels.html", "Adventurer Levels", "Player levels, public grades, XP sources"],
-  ["skills-stats.html", "Skills, Stats and Mana", "Skill caps, stat caps, Channeling, Focus, mana regeneration, Intelligence, Wisdom, magic resistance"],
+  ["skills-stats.html", "Skills, Stats and Mana", "Skill caps, Barding difficulty, Provoke practice bonus, Channeling, Focus, mana, Wisdom"],
   ["rifts.html", "Planar Rifts", "Static rift anchors, waves, affixes, regional themes"],
   ["breach-gates.html", "Rift Breach Expeditions", "E through S dungeons, sigils, waves, timers, caches"],
   ["regional-events.html", "Regional Events", "Invasions, escorts, corrupted resource surges, shrine defenses, roaming elites, multi-stage rifts, objectives, rewards"],
   ["world-bosses.html", "World Bosses", "Rare breach events, random bosses, five-day despawn"],
   ["creatures.html", "Creatures", "Enemy rarity, mutations, creature families"],
-  ["loot-relics.html", "Loot and Relics", "Dynamic loot, Arcane Recycler, Arcane Anvil, Arcane Toolkit, Planar Forge, salvage skills, relic awakening"],
+  ["loot-relics.html", "Planar Crafting, Riftborn Gear and Relics", "Breach Essence, Planar Dust, Shards, Cores, Recycler, Forge, repair, cleansing, Masterworks, trade"],
   ["shrines-lore.html", "God Shrines and Lore", "Shrine blessings, deity dedications, shard lore"],
   ["story-discovery.html", "Story and Discovery", "The Unseen Thread, journals, environmental clues, rumors, Pip, persistent investigations, world consequences"],
   ["bounties.html", "Bounty Boards", "Contracts, rewards, progression hooks"],
+  ["renown-bards.html", "Renown and Bards", "Regional leaders, ranks, rewards, inn vitality, Pip's lute flute drum repertoire, Panache, Silverwind, Many-Road"],
   ["roadmap.html", "Development Roadmap", "Current priorities, active development, future dungeons, professions, guilds, story, events, collections"],
   ["reference.html", "Reference", "Templates, terms, launch notes"]
 ];
@@ -66,6 +67,17 @@ function ensureStoryNav() {
   anchor.textContent = "Story and Discovery";
   const bountyLink = navPanel.querySelector('a[href="bounties.html"]');
   navPanel.insertBefore(anchor, bountyLink || null);
+}
+
+function ensureRenownBardsNav() {
+  const navPanel = document.querySelector(".nav-panel");
+  if (!navPanel || navPanel.querySelector('a[href="renown-bards.html"]')) return;
+  const anchor = document.createElement("a");
+  anchor.href = "renown-bards.html";
+  anchor.setAttribute("data-nav", "");
+  anchor.textContent = "Renown and Bards";
+  const referenceLink = navPanel.querySelector('a[href="reference.html"]');
+  navPanel.insertBefore(anchor, referenceLink || null);
 }
 
 function ensureRoadmapNav() {
@@ -142,8 +154,10 @@ document.addEventListener("DOMContentLoaded", () => {
   ensureSkillsStatsNav();
   ensureRegionalEventsNav();
   ensureStoryNav();
+  ensureRenownBardsNav();
   ensureRoadmapNav();
   ensureCommunityNav();
   markActiveNav();
   setupSearch();
 });
+
