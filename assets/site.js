@@ -15,7 +15,7 @@ const pages = [
   ["bounties.html", "Bounty Boards", "Contracts, rewards, progression hooks"],
   ["renown-bards.html", "Renown and Bards", "Regional leaders, ranks, rewards, inn vitality, Pip's lute flute drum repertoire, Panache, Silverwind, Many-Road"],
   ["roadmap.html", "Development Roadmap", "Current priorities, active development, future dungeons, professions, guilds, story, events, collections"],
-  ["reference.html", "Reference", "Templates, terms, launch notes"]
+  ["reference.html", "Player Tools and Reference", "Activities hub, waypoints, professions, economy, HUD modes, event alerts, templates, and terms"]
 ];
 
 function currentFile() {
@@ -142,7 +142,7 @@ function setupSearch() {
     if (matches.length === 0) {
       const empty = document.createElement("div");
       empty.className = "search-result";
-      empty.innerHTML = "<strong>No matches yet</strong><span>Try breach, sigil, event, rift, relic, region, grade, or bounty.</span>";
+      empty.innerHTML = "<strong>No matches yet</strong><span>Try activities, waypoint, profession, economy, HUD, event, rift, or bounty.</span>";
       resultList.appendChild(empty);
     }
 
