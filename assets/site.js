@@ -14,6 +14,7 @@ const pages = [
   ["story-discovery.html", "Story and Discovery", "The Unseen Thread, journals, environmental clues, rumors, Pip, persistent investigations, world consequences"],
   ["bounties.html", "Bounty Boards", "Contracts, rewards, progression hooks"],
   ["renown-bards.html", "Renown and Bards", "Regional leaders, ranks, rewards, inn vitality, Pip's lute flute drum repertoire, Panache, Silverwind, Many-Road"],
+  ["player-marketplace.html", "Player Marketplace", "Regional buy orders, sell orders, escrow, claims, fees, taxes, Eldeir, Helm, Pyros, Market Stewards"],
   ["roadmap.html", "Development Roadmap", "Current priorities, active development, future dungeons, professions, guilds, story, events, collections"],
   ["reference.html", "Player Tools and Reference", "Activities hub, waypoints, professions, economy, HUD modes, event alerts, templates, and terms"]
 ];
@@ -76,6 +77,17 @@ function ensureRenownBardsNav() {
   anchor.href = "renown-bards.html";
   anchor.setAttribute("data-nav", "");
   anchor.textContent = "Renown and Bards";
+  const referenceLink = navPanel.querySelector('a[href="reference.html"]');
+  navPanel.insertBefore(anchor, referenceLink || null);
+}
+
+function ensureMarketplaceNav() {
+  const navPanel = document.querySelector(".nav-panel");
+  if (!navPanel || navPanel.querySelector('a[href="player-marketplace.html"]')) return;
+  const anchor = document.createElement("a");
+  anchor.href = "player-marketplace.html";
+  anchor.setAttribute("data-nav", "");
+  anchor.textContent = "Player Marketplace";
   const referenceLink = navPanel.querySelector('a[href="reference.html"]');
   navPanel.insertBefore(anchor, referenceLink || null);
 }
@@ -155,6 +167,7 @@ document.addEventListener("DOMContentLoaded", () => {
   ensureRegionalEventsNav();
   ensureStoryNav();
   ensureRenownBardsNav();
+  ensureMarketplaceNav();
   ensureRoadmapNav();
   ensureCommunityNav();
   markActiveNav();
