@@ -1,22 +1,26 @@
 const pages = [
   ["index.html", "Home", "Nosivad overview, shard goals, quick links"],
-  ["download.html", "Download Launcher", "Launcher installer, setup steps, release links"],
-  ["getting-started.html", "Getting Started", "Eldeir Village, first hour, Mira guide, starter hunt-and-gather path"],
+  ["https://nosivadloa.github.io/Nosivad-Launcher/download.html", "Download Launcher", "Launcher installer, portable zip, and setup steps"],
+  ["getting-started.html", "Getting Started", "Eldeir Village, first hour, guide, starter bounties"],
   ["adventurer-levels.html", "Adventurer Levels", "Player levels, public grades, XP sources"],
   ["skills-stats.html", "Skills, Stats and Mana", "Skill caps, Barding difficulty, Provoke practice bonus, Channeling, Focus, mana, Wisdom"],
+  ["armory.html", "Weapon Armory", "Current weapon types, attack, speed, primary abilities, secondary abilities, relic inheritance"],
+  ["professions-crafting.html", "Professions, Crafting and Enchanting", "Fourteen professions, rank thresholds, enchanting, practice, Repair Gear, cloaks, stone fences, gates, pillars, Leather Quiver"],
+  ["housing-mounts.html", "Housing, Storage and Mounts", "Starter home, one plot per account, secure house chests, trade pouches, Horse Armor Kits, Pyros fish dock"],
+  ["adventurer-npcs.html", "Adventurer NPCs and Companions", "Travel routes, Vanguard, Ranger, Arcanist, Shadowblade, Templar, hiring, Follow, Guard, tactics, renewals"],
   ["rifts.html", "Planar Rifts", "Static rift anchors, waves, affixes, regional themes"],
   ["breach-gates.html", "Rift Breach Expeditions", "E through S dungeons, sigils, waves, timers, caches"],
-  ["regional-events.html", "Regional Events", "Invasions, escorts, corrupted resource surges, shrine defenses, roaming elites, multi-stage rifts, objectives, rewards"],
-  ["world-bosses.html", "World Bosses", "Rare breach events, random bosses, five-day despawn"],
+  ["regional-events.html", "Regional Events", "Local events, enemy families, resources, bosses, rewards"],
+  ["world-bosses.html", "World Bosses", "Rare rift events, random bosses, five-day despawn"],
   ["creatures.html", "Creatures", "Enemy rarity, mutations, creature families"],
-  ["loot-relics.html", "Planar Crafting, Riftborn Gear and Relics", "Breach Essence, Planar Dust, Shards, Cores, Recycler, Forge, repair, cleansing, Masterworks, trade"],
+  ["loot-relics.html", "Planar Crafting, Riftborn Gear and Relics", "Repair Gear, durability, Metalsmithing, Fabrication, Woodsmithing, Breach Essence, Planar Dust, Shards, Cores, Recycler, Forge, cleansing, Masterworks, trade"],
   ["shrines-lore.html", "God Shrines and Lore", "Shrine blessings, deity dedications, shard lore"],
   ["story-discovery.html", "Story and Discovery", "The Unseen Thread, journals, environmental clues, rumors, Pip, persistent investigations, world consequences"],
   ["bounties.html", "Bounty Boards", "Contracts, rewards, progression hooks"],
   ["renown-bards.html", "Renown and Bards", "Regional leaders, ranks, rewards, inn vitality, Pip's lute flute drum repertoire, Panache, Silverwind, Many-Road"],
   ["player-marketplace.html", "Player Marketplace", "Regional buy orders, sell orders, escrow, claims, fees, taxes, Eldeir, Helm, Pyros, Market Stewards"],
   ["roadmap.html", "Development Roadmap", "Current priorities, active development, future dungeons, professions, guilds, story, events, collections"],
-  ["reference.html", "Player Tools and Reference", "Activities hub, waypoints, professions, economy, HUD modes, event alerts, templates, and terms"]
+  ["reference.html", "Player Tools and Reference", "Secure house chests, locked-down storage, stacked containers, item access, activities, waypoints, professions, economy, HUD modes, event alerts, templates, and terms"]
 ];
 
 function currentFile() {
@@ -30,6 +34,25 @@ function markActiveNav() {
     if (link.getAttribute("href") === file) {
       link.classList.add("active");
     }
+  });
+}
+
+function ensureCommunityNav() {
+  const navPanel = document.querySelector(".nav-panel");
+  if (!navPanel) return;
+
+  const links = [
+    ["https://nosivadloa.github.io/Nosivad-Launcher/download.html", "Download Launcher"],
+    ["https://discord.gg/5HZ4GMZjd6", "Join Discord"]
+  ];
+
+  links.forEach(([href, label]) => {
+    if (navPanel.querySelector(`a[href="${href}"]`)) return;
+
+    const anchor = document.createElement("a");
+    anchor.href = href;
+    anchor.textContent = label;
+    navPanel.appendChild(anchor);
   });
 }
 
@@ -59,37 +82,38 @@ function ensureSkillsStatsNav() {
   levelsLink?.insertAdjacentElement("afterend", anchor);
 }
 
-function ensureStoryNav() {
+function ensureArmoryNav() {
   const navPanel = document.querySelector(".nav-panel");
-  if (!navPanel || navPanel.querySelector('a[href="story-discovery.html"]')) return;
+  if (!navPanel || navPanel.querySelector('a[href="armory.html"]')) return;
+
   const anchor = document.createElement("a");
-  anchor.href = "story-discovery.html";
+  anchor.href = "armory.html";
   anchor.setAttribute("data-nav", "");
-  anchor.textContent = "Story and Discovery";
-  const bountyLink = navPanel.querySelector('a[href="bounties.html"]');
-  navPanel.insertBefore(anchor, bountyLink || null);
+  anchor.textContent = "Weapon Armory";
+
+  const skillsLink = navPanel.querySelector('a[href="skills-stats.html"]');
+  skillsLink?.insertAdjacentElement("afterend", anchor);
 }
 
-function ensureRenownBardsNav() {
+function ensureCurrentSystemsNav() {
   const navPanel = document.querySelector(".nav-panel");
-  if (!navPanel || navPanel.querySelector('a[href="renown-bards.html"]')) return;
-  const anchor = document.createElement("a");
-  anchor.href = "renown-bards.html";
-  anchor.setAttribute("data-nav", "");
-  anchor.textContent = "Renown and Bards";
-  const referenceLink = navPanel.querySelector('a[href="reference.html"]');
-  navPanel.insertBefore(anchor, referenceLink || null);
-}
+  if (!navPanel) return;
 
-function ensureMarketplaceNav() {
-  const navPanel = document.querySelector(".nav-panel");
-  if (!navPanel || navPanel.querySelector('a[href="player-marketplace.html"]')) return;
-  const anchor = document.createElement("a");
-  anchor.href = "player-marketplace.html";
-  anchor.setAttribute("data-nav", "");
-  anchor.textContent = "Player Marketplace";
-  const referenceLink = navPanel.querySelector('a[href="reference.html"]');
-  navPanel.insertBefore(anchor, referenceLink || null);
+  const entries = [
+    ["professions-crafting.html", "Professions and Crafting"],
+    ["housing-mounts.html", "Housing, Storage and Mounts"],
+    ["adventurer-npcs.html", "Adventurer NPCs"]
+  ];
+  const riftsLink = navPanel.querySelector('a[href="rifts.html"]');
+
+  entries.forEach(([href, label]) => {
+    if (navPanel.querySelector(`a[href="${href}"]`)) return;
+    const anchor = document.createElement("a");
+    anchor.href = href;
+    anchor.setAttribute("data-nav", "");
+    anchor.textContent = label;
+    navPanel.insertBefore(anchor, riftsLink || null);
+  });
 }
 
 function ensureRoadmapNav() {
@@ -105,24 +129,30 @@ function ensureRoadmapNav() {
   navPanel.insertBefore(anchor, referenceLink || null);
 }
 
-function ensureCommunityNav() {
+function ensureStoryNav() {
   const navPanel = document.querySelector(".nav-panel");
-  if (!navPanel) return;
+  if (!navPanel || navPanel.querySelector('a[href="story-discovery.html"]')) return;
 
-  const links = [
-    ["download.html", "Download Launcher", true],
-    ["https://discord.gg/TY5kQ62p9", "Join Discord", false]
-  ];
+  const anchor = document.createElement("a");
+  anchor.href = "story-discovery.html";
+  anchor.setAttribute("data-nav", "");
+  anchor.textContent = "Story and Discovery";
 
-  links.forEach(([href, label, isSitePage]) => {
-    if (navPanel.querySelector(`a[href="${href}"]`)) return;
+  const bountyLink = navPanel.querySelector('a[href="bounties.html"]');
+  navPanel.insertBefore(anchor, bountyLink || null);
+}
 
-    const anchor = document.createElement("a");
-    anchor.href = href;
-    if (isSitePage) anchor.setAttribute("data-nav", "");
-    anchor.textContent = label;
-    navPanel.appendChild(anchor);
-  });
+function ensureMarketplaceNav() {
+  const navPanel = document.querySelector(".nav-panel");
+  if (!navPanel || navPanel.querySelector('a[href="player-marketplace.html"]')) return;
+
+  const anchor = document.createElement("a");
+  anchor.href = "player-marketplace.html";
+  anchor.setAttribute("data-nav", "");
+  anchor.textContent = "Player Marketplace";
+
+  const referenceLink = navPanel.querySelector('a[href="reference.html"]');
+  navPanel.insertBefore(anchor, referenceLink || null);
 }
 
 function setupSearch() {
@@ -164,13 +194,13 @@ function setupSearch() {
 
 document.addEventListener("DOMContentLoaded", () => {
   ensureSkillsStatsNav();
+  ensureArmoryNav();
+  ensureCurrentSystemsNav();
   ensureRegionalEventsNav();
   ensureStoryNav();
-  ensureRenownBardsNav();
   ensureMarketplaceNav();
   ensureRoadmapNav();
   ensureCommunityNav();
   markActiveNav();
   setupSearch();
 });
-

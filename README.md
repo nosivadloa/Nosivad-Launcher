@@ -14,6 +14,11 @@ Create a public GitHub repository for the website and upload the contents of thi
   download.html
   getting-started.html
   adventurer-levels.html
+  skills-stats.html
+  armory.html
+  professions-crafting.html
+  housing-mounts.html
+  adventurer-npcs.html
   rifts.html
   breach-gates.html
   world-bosses.html
@@ -21,6 +26,7 @@ Create a public GitHub repository for the website and upload the contents of thi
   loot-relics.html
   shrines-lore.html
   bounties.html
+  roadmap.html
   reference.html
   assets/
 ```
