@@ -13,6 +13,7 @@ const pages = [
   ["regional-events.html", "Regional Events", "Local events, enemy families, resources, bosses, rewards"],
   ["world-bosses.html", "World Bosses", "Rare rift events, random bosses, five-day despawn"],
   ["creatures.html", "Creatures", "Enemy rarity, mutations, creature families"],
+  ["taming-pets.html", "Taming and Pets", "/pet, level 100, creature abilities, Tamer's Grimoire, Inscription, storage, control slots"],
   ["loot-relics.html", "Planar Crafting, Riftborn Gear and Relics", "Repair Gear, durability, Metalsmithing, Fabrication, Woodsmithing, Breach Essence, Planar Dust, Shards, Cores, Recycler, Forge, cleansing, Masterworks, trade"],
   ["shrines-lore.html", "God Shrines and Lore", "Shrine blessings, deity dedications, shard lore"],
   ["story-discovery.html", "Story and Discovery", "The Unseen Thread, journals, environmental clues, rumors, Pip, persistent investigations, world consequences"],
@@ -155,6 +156,19 @@ function ensureMarketplaceNav() {
   navPanel.insertBefore(anchor, referenceLink || null);
 }
 
+function ensureTamingNav() {
+  const navPanel = document.querySelector(".nav-panel");
+  if (!navPanel || navPanel.querySelector('a[href="taming-pets.html"]')) return;
+
+  const anchor = document.createElement("a");
+  anchor.href = "taming-pets.html";
+  anchor.setAttribute("data-nav", "");
+  anchor.textContent = "Taming and Pets";
+  const creaturesLink = navPanel.querySelector('a[href="creatures.html"]');
+  if (creaturesLink) creaturesLink.insertAdjacentElement("afterend", anchor);
+  else navPanel.appendChild(anchor);
+}
+
 function setupSearch() {
   const input = document.querySelector("[data-search]");
   const results = document.querySelector("[data-search-results]");
@@ -199,6 +213,7 @@ document.addEventListener("DOMContentLoaded", () => {
   ensureRegionalEventsNav();
   ensureStoryNav();
   ensureMarketplaceNav();
+  ensureTamingNav();
   ensureRoadmapNav();
   ensureCommunityNav();
   markActiveNav();
