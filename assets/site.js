@@ -1,4 +1,6 @@
 const pages = [
+  ["vocation-renown.html", "Vocation Renown", "/vocation /tradelevel gathering crafting XP contribution Trade Insights surveys commissions respec"],
+  ["recent-updates.html", "Recent Changes and Availability", "October 3 Power Hour Reclamation Camping Kit Eldeir Magetower portals Carpenter recipes merchant fixes"],
   ["index.html", "Home", "Nosivad overview, shard goals, quick links"],
   ["https://nosivadloa.github.io/Nosivad-Launcher/download.html", "Download Launcher", "Launcher installer, portable zip, and setup steps"],
   ["getting-started.html", "Getting Started", "Eldeir Village, first hour, guide, starter bounties"],
@@ -219,3 +221,14 @@ document.addEventListener("DOMContentLoaded", () => {
   markActiveNav();
   setupSearch();
 });
+
+function ensureVocationNav() {
+  const nav = document.querySelector(".nav-panel");
+  if (!nav) return;
+  [["vocation-renown.html", "Vocation Renown"], ["recent-updates.html", "Recent Changes"]].forEach(([href, label]) => {
+    if (nav.querySelector(`a[href="${href}"]`)) return;
+    const a = document.createElement("a"); a.href = href; a.textContent = label; a.setAttribute("data-nav", ""); nav.appendChild(a);
+  });
+  markActiveNav();
+}
+if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", ensureVocationNav); else ensureVocationNav();

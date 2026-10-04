@@ -64,3 +64,10 @@ with your real release asset URLs.
 - `.nojekyll` is included so GitHub Pages serves the site as plain static files.
 - `404.html` is included for cleaner broken-link handling.
 - The search box is local and static; it does not require a server backend.
+
+## October 3 guide refresh
+
+- `vocation-renown.html`: productive progression, contribution, Insights, surveys, commissions, and respecs.
+- `recent-updates.html`: changes since September 22 with availability boundaries.
+
+Canonical documentation reviewed October 3, 2026.
