@@ -3,55 +3,68 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Nosivad Wiki</title>
+  <meta name="description" content="Player guides for Legends of Aria: Eternal on Nosivad, organized by character, adventure, crafting, and community topics.">
+  <title>Nosivad Knowledge Base</title>
   <link rel="stylesheet" href="assets/site.css">
 </head>
 <body>
   <header class="site-header">
     <div class="header-inner">
-      <div class="brand"><div class="brand-mark">N</div><div><h1>Nosivad Wiki</h1><p>Planars, Rifts, and Relics shard guide</p></div></div>
-      <div class="search"><input data-search placeholder="Search the wiki"></div>
+      <div class="brand"><div class="brand-mark" aria-hidden="true">N</div><div><h1>Nosivad Knowledge Base</h1><p>Legends of Aria: Eternal player guides</p></div></div>
+      <div class="search"><label for="wiki-search">Search the knowledge base</label><input id="wiki-search" data-search placeholder="Search guides, skills, crafting…"></div>
     </div>
   </header>
-  <div class="search-results" data-search-results><div class="search-results-inner" data-search-list></div></div>
+  <div class="search-results" data-search-results aria-live="polite"><div class="search-results-inner" data-search-list></div></div>
   <main class="layout">
-    <aside class="sidebar"><nav class="nav-panel"><h2>Wiki</h2>
-      <a data-nav href="index.html">Home</a><a data-nav href="getting-started.html">Getting Started</a><a data-nav href="adventurer-levels.html">Adventurer Levels</a><a data-nav href="rifts.html">Planar Rifts</a><a data-nav href="breach-gates.html">Breach Gates</a><a data-nav href="world-bosses.html">World Bosses</a><a data-nav href="creatures.html">Creatures</a><a data-nav href="loot-relics.html">Loot and Relics</a><a data-nav href="shrines-lore.html">Shrines and Lore</a><a data-nav href="bounties.html">Bounty Boards</a><a data-nav href="renown-bards.html">Renown and Bards</a><a data-nav href="reference.html">Reference</a>
+    <aside class="sidebar"><nav class="nav-panel" aria-label="Knowledge Base categories"><h2>Browse Guides</h2>
+      <div class="nav-group"><h3>Start Here</h3><a data-nav href="index.html">Knowledge Base Home</a><a data-nav href="getting-started.html">Getting Started</a><a data-nav href="reference.html">Commands and Quick Reference</a></div>
+      <div class="nav-group"><h3>Character</h3><a data-nav href="adventurer-levels.html">Adventurer Progress</a><a data-nav href="skills-stats.html">Skills and Stats</a><a data-nav href="armory.html">Weapons and Abilities</a><a data-nav href="vocation-renown.html">Gathering and Crafting Progress</a></div>
+      <div class="nav-group"><h3>World and Adventure</h3><a data-nav href="rifts.html">Planar Rifts</a><a data-nav href="breach-gates.html">Rift Breach</a><a data-nav href="regional-events.html">Regional Events</a><a data-nav href="world-bosses.html">World Bosses</a><a data-nav href="creatures.html">Creatures and Enemies</a><a data-nav href="taming-pets.html">Taming and Pets</a><a data-nav href="shrines-lore.html">Shrines and Lore</a><a data-nav href="story-discovery.html">Story and Discovery</a><a data-nav href="bounties.html">Bounty Boards</a></div>
+      <div class="nav-group"><h3>Crafting and Community</h3><a data-nav href="professions-crafting.html">Professions and Crafting</a><a data-nav href="loot-relics.html">Loot and Relics</a><a data-nav href="housing-mounts.html">Housing, Storage and Mounts</a><a data-nav href="player-marketplace.html">Player Marketplace</a><a data-nav href="renown-bards.html">Renown and Bards</a></div>
+      <div class="nav-group"><h3>Shard News</h3><a data-nav href="recent-updates.html">Recent Changes</a><a data-nav href="roadmap.html">Roadmap</a></div>
     </nav></aside>
     <section class="content">
       <div class="hero has-art">
-        <div class="hero-banner"><img src="assets/nosivad-hero.png" alt="Nosivad key art"></div>
-        <h2>Welcome to Nosivad</h2>
-        <p class="lead">A player-facing knowledge base for the Legends of Aria shard built around planar rifts, dangerous incursions, divine shrines, bounty boards, rare relics, and long-form adventurer progression.</p>
+        <div class="hero-banner"><img src="assets/nosivad-hero.png" alt="Nosivad fantasy world key art"></div>
+        <h2>Find your next adventure</h2>
+        <p class="lead">Quick, player-focused guides to the world, character progression, crafting, and the Nosivad systems you can use in game.</p>
+        <div class="hero-actions"><a class="button-link primary" href="getting-started.html">New to Nosivad? Start here</a><a class="button-link" href="reference.html">Look up a command</a></div>
+        <div class="source-legend"><span class="source-tag">Legends of Aria: Eternal</span><span class="source-tag nosivad">Nosivad shard changes</span></div>
+        <p class="rule-key">This guide includes both the base game and Nosivad-specific rules. When Nosivad changes how a system works, the guide describes the rule used on this shard.</p>
       </div>
-      <div class="grid"><article class="card"><h3>Vocation Renown</h3><p>Learn productive XP, contribution requirements, Insights, surveys, and commissions.</p><a href="vocation-renown.html">Read the Vocation guide</a></article><article class="card"><h3>Recent Changes</h3><p>Changes since September 22, with pending updates clearly identified.</p><a href="recent-updates.html">Read the October 3 refresh</a></article>
-
-        <article class="card"><h3>Activities and Waypoints</h3><p>Use one hub to review contracts, events, story, professions, economy, Breach status, and your personal tracked destination.</p><a href="reference.html">Open the player tools reference</a></article>
-        <article class="card"><h3>Start Here</h3><p>Learn the first-hour path through Eldeir Village, starter bounties, shrines, and your first safe combat lessons.</p><a href="getting-started.html">Read the starter guide</a></article>
-        <article class="card"><h3>Planar Rift Variants</h3><p>Static rift anchors unleash themed enemy waves shaped by Brimstone, Glacial, Vampiric, Sanguine, or Tyrant influence.</p><a href="rifts.html">Understand rifts</a></article>
-        <article class="card"><h3>Rift Breach Expeditions</h3><p>Enter E through S-grade dungeons with grade-matched sigils, populated rooms, hidden bosses, wave timers, and cache rewards.</p><a href="breach-gates.html">Prepare for a Breach</a></article>
-        <article class="card"><h3>Regional Events</h3><p>Track distinctive local enemy families, resources, contracts, rotating events, named bosses, and regional rewards.</p><a href="regional-events.html">Explore regional threats</a></article>
-        <article class="card"><h3>Planar Crafting and Loot</h3><p>Turn Riftborn Gear, planar materials, and Breach Essence into repair, cleansing, upgrades, relic awakening, and Planar Masterworks.</p><a href="loot-relics.html">Study loot and crafting</a></article>
-        <article class="card"><h3>Professions and Enchanting</h3><p>Review all fourteen paths, enchanting and practice, skill-based equipment repair, crafted cloaks, and useful construction recipes.</p><a href="professions-crafting.html">Open the crafting guide</a></article>
-        <article class="card"><h3>Housing, Storage and Mounts</h3><p>Understand starter-home eligibility, secure house storage, container trading, Horse Armor Kits, and indoor mount rules.</p><a href="housing-mounts.html">Review player utilities</a></article>
-        <article class="card"><h3>Adventurer NPCs</h3><p>Meet traveling class-based Adventurers, hire companions, set Follow or Guard orders, choose tactics, and build renewal loyalty.</p><a href="adventurer-npcs.html">Learn companion controls</a></article>
-        <article class="card"><h3>Taming and Pets</h3><p>Raise pets to level 100, choose creature-themed abilities, and carry companions in a craftable or purchasable Tamer's Grimoire.</p><a href="taming-pets.html">Explore pet management</a></article>
-        <article class="card"><h3>Adventurer Grade</h3><p>Your public E/D/C/B/A/S grade reflects your progress while your numeric level remains private.</p><a href="adventurer-levels.html">View progression</a></article>
-        <article class="card"><h3>World Bosses</h3><p>Rare rift events can bring a single powerful boss into the world for up to five real-world days.</p><a href="world-bosses.html">Prepare for bosses</a></article>
-        <article class="card"><h3>Shrines and Lore</h3><p>God shrines replace standard resurrection points and connect each region to a divine dedication.</p><a href="shrines-lore.html">Explore the pantheon</a></article>
-        <article class="card"><h3>Story and Discovery</h3><p>Follow The Unseen Thread through persistent clues, evolving rumors, Pip's hidden refrain, and shared world consequences.</p><a href="story-discovery.html">Open the investigation</a></article>
-        <article class="card"><h3>Renown and Bards</h3><p>Build standing with 15 regional leaders, recover near inn bards, and choose among Pip's rotating lute, flute, and drum buffs.</p><a href="renown-bards.html">Review renown and music</a></article>
-        <article class="card"><h3>Player Marketplace</h3><p>Create regional buy and sell orders, manage exact escrow, and collect completed trades through Claims in Eldeir, Helm, and Pyros.</p><a href="player-marketplace.html">Learn regional trading</a></article>
-        <article class="card"><h3>Development Roadmap</h3><p>See what has shipped, what is being tested now, and the larger systems planned for Nosivad.</p><a href="roadmap.html">See what comes next</a></article>
-      </div>
-      <article class="article" style="margin-top:24px">
-        <h3>Launch Status</h3>
-        <p>This wiki is a living player guide. Values may change while the shard is tuned, and reference tables are included where they answer common gameplay questions.</p>
-        <div class="callout">Tip: use <code>/activities</code> as the combined activity hub, <code>/adventure</code> to track a contract, <code>/story</code> for investigation progress, <code>/events</code> for regional activity, and <code>/help</code> for the full in-game guide.</div>
-      </article>
+      <section class="category" aria-labelledby="start-title"><div class="category-heading"><h2 id="start-title">Start Here</h2><p>Set up your first steps and find the controls you need.</p></div><div class="grid">
+        <article class="card"><span class="card-icon" aria-hidden="true">🧭</span><h3>Getting Started</h3><p>Follow a beginner-friendly route through Eldeir Village, early contracts, shrines, and combat practice.</p><a href="getting-started.html">Read the starter guide →</a></article>
+        <article class="card"><span class="card-icon" aria-hidden="true">⌨️</span><h3>Commands and Quick Reference</h3><p>Find useful player commands, activity tools, and common terms in one place.</p><a href="reference.html">Open quick reference →</a></article>
+      </div></section>
+      <section class="category" aria-labelledby="character-title"><div class="category-heading"><h2 id="character-title">Character and Progression</h2><p>Learn skills, attributes, equipment, and long-term advancement.</p></div><div class="grid">
+        <article class="card"><span class="card-icon" aria-hidden="true">📈</span><h3>Adventurer Progress</h3><p>Understand your level, public grade, experience, and progression rewards.</p><a href="adventurer-levels.html">View progression →</a></article>
+        <article class="card"><span class="card-icon" aria-hidden="true">💪</span><h3>Skills and Stats</h3><p>Look up skill caps, stat limits, mana, focus, and Barding.</p><a href="skills-stats.html">Read skills and stats →</a></article>
+        <article class="card"><span class="card-icon" aria-hidden="true">⚔️</span><h3>Weapons and Abilities</h3><p>Compare weapon types and learn which combat abilities they support.</p><a href="armory.html">Browse the armory →</a></article>
+        <article class="card"><span class="card-icon" aria-hidden="true">🪓</span><h3>Gathering and Crafting Progress</h3><p>Build Vocation through useful gathering and crafting, then spend Insights on your trade.</p><a href="vocation-renown.html">Explore Vocation →</a></article>
+      </div></section>
+      <section class="category" aria-labelledby="world-title"><div class="category-heading"><h2 id="world-title">World and Adventure</h2><p>Explore encounters, creatures, stories, and rewards.</p></div><div class="grid">
+        <article class="card"><span class="card-icon" aria-hidden="true">🌀</span><h3>Planar Rifts</h3><p>Prepare a scroll, find an anchor, and face its themed encounter.</p><a href="rifts.html">Learn about rifts →</a></article>
+        <article class="card"><span class="card-icon" aria-hidden="true">🚪</span><h3>Rift Breach</h3><p>Learn about the scheduled gate and the Fallen Realm beyond it.</p><a href="breach-gates.html">Prepare for a Breach →</a></article>
+        <article class="card"><span class="card-icon" aria-hidden="true">🌍</span><h3>Regional Events</h3><p>See how local activities and threats give each region its character.</p><a href="regional-events.html">Explore the regions →</a></article>
+        <article class="card"><span class="card-icon" aria-hidden="true">👹</span><h3>Creatures and World Bosses</h3><p>Learn about enemy ranks, mutations, and rare boss encounters.</p><a href="creatures.html">Study creatures →</a> · <a href="world-bosses.html">World bosses →</a></article>
+        <article class="card"><span class="card-icon" aria-hidden="true">🐾</span><h3>Taming and Pets</h3><p>Manage your pets, open the pet controls, and store companions safely.</p><a href="taming-pets.html">Read the pet guide →</a></article>
+        <article class="card"><span class="card-icon" aria-hidden="true">📜</span><h3>Story, Shrines, and Bounties</h3><p>Follow clues, visit shrines, and take on regional contracts.</p><a href="story-discovery.html">Discover the story →</a> · <a href="shrines-lore.html">Shrines →</a> · <a href="bounties.html">Bounties →</a></article>
+      </div></section>
+      <section class="category" aria-labelledby="craft-title"><div class="category-heading"><h2 id="craft-title">Crafting and Community</h2><p>Make and improve your gear, manage a home, and trade with other players.</p></div><div class="grid">
+        <article class="card"><span class="card-icon" aria-hidden="true">🔨</span><h3>Professions and Crafting</h3><p>Find profession ranks, gathering guidance, repairs, and enchanting help.</p><a href="professions-crafting.html">Open crafting guides →</a></article>
+        <article class="card"><span class="card-icon" aria-hidden="true">✨</span><h3>Loot and Relics</h3><p>Learn about Riftborn equipment, relics, and planar materials.</p><a href="loot-relics.html">Explore rewards →</a></article>
+        <article class="card"><span class="card-icon" aria-hidden="true">🏠</span><h3>Housing, Storage, and Mounts</h3><p>Review starter homes, secure storage, mounts, and item safety.</p><a href="housing-mounts.html">Read the home guide →</a></article>
+        <article class="card"><span class="card-icon" aria-hidden="true">🪙</span><h3>Player Marketplace</h3><p>Place regional buy and sell orders and collect completed trades.</p><a href="player-marketplace.html">Learn to trade →</a></article>
+        <article class="card"><span class="card-icon" aria-hidden="true">🎶</span><h3>Renown and Bards</h3><p>Build standing with regional leaders and hear what the bards can offer.</p><a href="renown-bards.html">Explore renown and music →</a></article>
+        <article class="card"><span class="card-icon" aria-hidden="true">🧑‍🤝‍🧑</span><h3>Adventurer Companions</h3><p>Meet traveling Adventurers and learn how hired companions work.</p><a href="adventurer-npcs.html">Meet the Adventurers →</a></article>
+      </div></section>
+      <section class="category" aria-labelledby="news-title"><div class="category-heading"><h2 id="news-title">Shard News</h2><p>Check current player-facing changes and broad future directions.</p></div><div class="grid">
+        <article class="card"><span class="card-icon" aria-hidden="true">📰</span><h3>Recent Changes</h3><p>A concise summary of published Nosivad updates available to players.</p><a href="recent-updates.html">Read recent changes →</a></article>
+        <article class="card"><span class="card-icon" aria-hidden="true">🗺️</span><h3>Roadmap</h3><p>Broad themes for future work. Plans can change as development continues.</p><a href="roadmap.html">View the roadmap →</a></article>
+      </div></section>
     </section>
   </main>
-  <footer class="site-footer">Nosivad: Planars, Rifts, and Relics - player wiki draft</footer>
+  <footer class="site-footer">Nosivad Knowledge Base · Player guides for Legends of Aria: Eternal</footer>
   <script src="assets/site.js"></script>
 </body>
 </html>

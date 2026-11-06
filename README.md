@@ -1,73 +1,22 @@
-# Nosivad GitHub Pages Site
+# Nosivad Knowledge Base
 
-This folder is prepared to publish as a static GitHub Pages website for the Nosivad shard.
+A no-build, player-facing guide site for Legends of Aria: Eternal on Nosivad.
+Open `index.html` to preview it locally.
 
-## Suggested Repo Layout
+The guide follows the base game's Knowledge Base pattern: browse by category,
+open a short topic card, or search for a guide. Topics include base-game
+foundations and Nosivad's shard-specific rules. When Nosivad changes a system,
+the guide explains the behavior players will encounter on this shard.
 
-Create a public GitHub repository for the website and upload the contents of this folder to the repository root:
+## Categories
 
-```text
-/
-  .nojekyll
-  404.html
-  index.html
-  download.html
-  getting-started.html
-  adventurer-levels.html
-  skills-stats.html
-  armory.html
-  professions-crafting.html
-  housing-mounts.html
-  adventurer-npcs.html
-  rifts.html
-  breach-gates.html
-  world-bosses.html
-  creatures.html
-  loot-relics.html
-  shrines-lore.html
-  bounties.html
-  roadmap.html
-  reference.html
-  assets/
-```
+- Start Here: Getting Started; Commands and Quick Reference
+- Character: Adventurer Progress; Skills and Stats; Weapons and Abilities; Vocation
+- World and Adventure: Rifts; Rift Breach; Regional Events; World Bosses; Creatures; Pets; Shrines; Story; Bounties
+- Crafting and Community: Professions; Loot and Relics; Housing; Marketplace; Renown; Adventurer Companions
+- Shard News: Recent Changes; Roadmap
 
-## Publish Steps
-
-1. Create a public GitHub repository.
-2. Upload these files to the repository root.
-3. In GitHub, open `Settings -> Pages`.
-4. Set the source to `Deploy from a branch`.
-5. Choose the main branch and `/ (root)`.
-6. Save and wait for the Pages URL to appear.
-
-## Launcher Downloads
-
-Do **not** upload the installer EXE into this Pages repo.
-
-Instead:
-
-1. Create a GitHub Release in a separate repo or in the same repo.
-2. Upload these files to the release:
-   - `NosivadLauncher-Setup-win-x64.exe`
-   - `NosivadLauncher-win-x64.zip`
-3. Update `download.html` and replace:
-
-```text
-https://github.com/nosivadloa/Nosivad-Launcher/releases/latest/download/NosivadLauncher-Setup-win-x64.exe
-https://github.com/nosivadloa/Nosivad-Launcher/releases/latest/download/NosivadLauncher-win-x64.zip
-```
-
-with your real release asset URLs.
-
-## Notes
-
-- `.nojekyll` is included so GitHub Pages serves the site as plain static files.
-- `404.html` is included for cleaner broken-link handling.
-- The search box is local and static; it does not require a server backend.
-
-## October 3 guide refresh
-
-- `vocation-renown.html`: productive progression, contribution, Insights, surveys, commissions, and respecs.
-- `recent-updates.html`: changes since September 22 with availability boundaries.
-
-Canonical documentation reviewed October 3, 2026.
+`assets/site.css` provides the responsive layout and shared styles.
+`assets/site.js` provides active navigation and the guide search index.
+The only site artwork currently available in this folder is
+`assets/nosivad-hero.png`; the landing page uses it as its header image.
