@@ -3,6 +3,7 @@ const pages = [
   ["getting-started.html", "Getting Started", "First steps, Eldeir Village, controls"],
   ["adventurer-levels.html", "Adventurer Progress", "Levels, grades, experience"],
   ["skills-stats.html", "Skills and Stats", "Skill caps, attributes, mana, Barding"],
+  ["necromancy.html", "Necromancy", "Necromancer profession, spells, Inscription and skeleton summons"],
   ["armory.html", "Weapons and Abilities", "Weapon types and combat abilities"],
   ["vocation-renown.html", "Gathering and Crafting Progress", "Vocation, Insights, surveys, commissions"],
   ["professions-crafting.html", "Professions and Crafting", "Ranks, recipes, repair, enchanting"],

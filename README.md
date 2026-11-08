@@ -11,7 +11,7 @@ the guide explains the behavior players will encounter on this shard.
 ## Categories
 
 - Start Here: Getting Started; Commands and Quick Reference
-- Character: Adventurer Progress; Skills and Stats; Weapons and Abilities; Vocation
+- Character: Adventurer Progress; Skills and Stats; Necromancy; Weapons and Abilities; Vocation
 - World and Adventure: Rifts; Rift Breach; Regional Events; World Bosses; Creatures; Pets; Shrines; Story; Bounties
 - Crafting and Community: Professions; Loot and Relics; Housing; Marketplace; Renown; Adventurer Companions
 - Shard News: Recent Changes; Roadmap
