@@ -25,3 +25,5 @@ Open `index.html` in a browser to preview it locally. The site can later be copi
 - `assets/site.js` - navigation highlighting and simple search
 
 When adding a page, also add it to the `pages` array in `assets/site.js`.
+
+Additional guides: professions, Vocation Renown, pets and companions, story, town renown, and markets and crafting.

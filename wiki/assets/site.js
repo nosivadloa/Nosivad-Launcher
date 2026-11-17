@@ -1,19 +1,109 @@
 const pages = [
-  ["index.html", "Home", "Nosivad overview, shard goals, quick links"],
-  ["whats-new.html", "What's New", "Recent magic, crafting, inventory, rune, and Necromancy updates"],
-  ["getting-started.html", "Getting Started", "Eldeir Village, first hour, guide, starter bounties"],
-  ["adventurer-levels.html", "Adventurer Levels", "Player levels, public grades, XP sources"],
-  ["skills-stats.html", "Skills and Stats", "Skill and stat caps, vitality, crafting and smelting"],
-  ["magic.html", "Magic and Spellbooks", "Magery, Necromancy, Evocation, Warding, Conjuration, Verdancy, spellbooks, summons"],
-  ["regional-events.html", "Regional Events", "Regional invasions, escorts, shrines, event progress"],
-  ["rifts.html", "Planar Rifts", "Static rift anchors, waves, affixes, regional themes"],
-  ["breach-gates.html", "Breach Gates", "Breach Gate grades, rooms, bosses, loot"],
-  ["world-bosses.html", "World Bosses", "Rare rift events, random bosses, five-day despawn"],
-  ["creatures.html", "Creatures", "Enemy rarity, mutations, creature families"],
-  ["loot-relics.html", "Loot and Relics", "Dynamic loot, graded gear, relic templates"],
-  ["shrines-lore.html", "Shrines and Lore", "Shrine blessings, deity dedications, shard lore"],
-  ["bounties.html", "Bounty Boards", "Contracts, rewards, progression hooks"],
-  ["reference.html", "Reference", "Runes, player commands, common terms"]
+  [
+    "index.html",
+    "Home",
+    "Overview and quick links"
+  ],
+  [
+    "whats-new.html",
+    "What's New",
+    "Recent live changes"
+  ],
+  [
+    "getting-started.html",
+    "Getting Started",
+    "First hour and starter contracts"
+  ],
+  [
+    "adventurer-levels.html",
+    "Adventurer Levels",
+    "XP and equipment grades"
+  ],
+  [
+    "skills-stats.html",
+    "Skills and Stats",
+    "Caps and attributes"
+  ],
+  [
+    "professions.html",
+    "Professions",
+    "Fourteen profession chains and trainer ranks"
+  ],
+  [
+    "vocation.html",
+    "Vocation Renown",
+    "Gathering, crafting, Trade Insights and commissions"
+  ],
+  [
+    "pets.html",
+    "Pets and Companions",
+    "Pet levels, abilities and hireable adventurers"
+  ],
+  [
+    "story.html",
+    "Story and Investigation",
+    "Clues, Pip and regional leaders"
+  ],
+  [
+    "town-renown.html",
+    "Town Renown",
+    "Regional standing and rank rewards"
+  ],
+  [
+    "markets.html",
+    "Markets and Crafting",
+    "Player markets, orders, salvage and forge"
+  ],
+  [
+    "magic.html",
+    "Magic and Spellbooks",
+    "Six schools, spellbooks and summons"
+  ],
+  [
+    "regional-events.html",
+    "Regional Events",
+    "Threats, objectives and participation"
+  ],
+  [
+    "rifts.html",
+    "Planar Rifts",
+    "Anchors, waves and sigils"
+  ],
+  [
+    "breach-gates.html",
+    "Breach Gates",
+    "Expedition ladder and rewards"
+  ],
+  [
+    "world-bosses.html",
+    "World Bosses",
+    "Rare rift events"
+  ],
+  [
+    "creatures.html",
+    "Creatures",
+    "Enemy rarity and mutations"
+  ],
+  [
+    "loot-relics.html",
+    "Loot and Relics",
+    "Graded gear and planar equipment"
+  ],
+  [
+    "shrines-lore.html",
+    "Shrines and Lore",
+    "Blessings and gods"
+  ],
+  [
+    "bounties.html",
+    "Bounty Boards",
+    "Contracts and rewards"
+  ],
+  [
+    "reference.html",
+    "Reference",
+    "Commands and terms"
+  ]
 ];
 
 function currentFile() {
