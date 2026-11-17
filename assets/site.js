@@ -4,7 +4,6 @@ const pages = [
   ["adventurer-levels.html", "Adventurer Progress", "Levels, grades, experience"],
   ["skills-stats.html", "Skills and Stats", "Skill caps, attributes, mana, Barding"],
   ["magic.html", "Magic Schools and Spellbooks", "Evocation, Warding, Conjuration, Verdancy, Necromancy, Magery, spells, summons, mounts"],
-  ["necromancy.html", "Necromancy", "Necromancer profession, spells, Inscription and skeleton summons"],
   ["armory.html", "Weapons and Abilities", "Weapon types and combat abilities"],
   ["vocation-renown.html", "Gathering and Crafting Progress", "Vocation, Insights, surveys, commissions"],
   ["professions-crafting.html", "Professions and Crafting", "Ranks, recipes, repair, enchanting"],
