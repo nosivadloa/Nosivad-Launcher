@@ -1,0 +1,167 @@
+{
+  "source": "Installed Legends of Aria: Eternal Knowledge Base",
+  "version": "1.0",
+  "categories": [
+    {
+      "group": "objects",
+      "name": "spawners",
+      "path": "data/official/objects-spawners.json.gz",
+      "entries": 1,
+      "bytes": 51
+    },
+    {
+      "group": "objects",
+      "name": "mobiles",
+      "path": "data/official/objects-mobiles.json.gz",
+      "entries": 1144,
+      "bytes": 1533233
+    },
+    {
+      "group": "objects",
+      "name": "equipment",
+      "path": "data/official/objects-equipment.json.gz",
+      "entries": 251,
+      "bytes": 134402
+    },
+    {
+      "group": "objects",
+      "name": "item_catalog",
+      "path": "data/official/objects-item_catalog.json.gz",
+      "entries": 269,
+      "bytes": 156580
+    },
+    {
+      "group": "objects",
+      "name": "item_sources",
+      "path": "data/official/objects-item_sources.json.gz",
+      "entries": 21509,
+      "bytes": 15737388
+    },
+    {
+      "group": "objects",
+      "name": "crafting_resources",
+      "path": "data/official/objects-crafting_resources.json.gz",
+      "entries": 235,
+      "bytes": 148590
+    },
+    {
+      "group": "objects",
+      "name": "essences",
+      "path": "data/official/objects-essences.json.gz",
+      "entries": 4,
+      "bytes": 77
+    },
+    {
+      "group": "objects",
+      "name": "ability_books",
+      "path": "data/official/objects-ability_books.json.gz",
+      "entries": 34,
+      "bytes": 7991
+    },
+    {
+      "group": "objects",
+      "name": "cross_references",
+      "path": "data/official/objects-cross_references.json.gz",
+      "entries": 5,
+      "bytes": 260
+    },
+    {
+      "group": "systems",
+      "name": "skills",
+      "path": "data/official/systems-skills.json.gz",
+      "entries": 41,
+      "bytes": 21708
+    },
+    {
+      "group": "systems",
+      "name": "abilities",
+      "path": "data/official/systems-abilities.json.gz",
+      "entries": 52,
+      "bytes": 68804
+    },
+    {
+      "group": "systems",
+      "name": "spells",
+      "path": "data/official/systems-spells.json.gz",
+      "entries": 43,
+      "bytes": 82786
+    },
+    {
+      "group": "systems",
+      "name": "crafting",
+      "path": "data/official/systems-crafting.json.gz",
+      "entries": 323,
+      "bytes": 249581
+    },
+    {
+      "group": "systems",
+      "name": "housing",
+      "path": "data/official/systems-housing.json.gz",
+      "entries": 20,
+      "bytes": 12683
+    },
+    {
+      "group": "systems",
+      "name": "combat",
+      "path": "data/official/systems-combat.json.gz",
+      "entries": 29,
+      "bytes": 13153
+    },
+    {
+      "group": "systems",
+      "name": "quest",
+      "path": "data/official/systems-quest.json.gz",
+      "entries": 119,
+      "bytes": 473326
+    },
+    {
+      "group": "systems",
+      "name": "regions",
+      "path": "data/official/systems-regions.json.gz",
+      "entries": 1147,
+      "bytes": 3916214
+    },
+    {
+      "group": "systems",
+      "name": "admin_commands",
+      "path": "data/official/systems-admin_commands.json.gz",
+      "entries": 191,
+      "bytes": 44057
+    },
+    {
+      "group": "extra",
+      "name": "bard_spells",
+      "path": "data/official/extra-bard_spells.json.gz",
+      "entries": 9,
+      "bytes": 18210
+    },
+    {
+      "group": "extra",
+      "name": "sorcery_spells",
+      "path": "data/official/extra-sorcery_spells.json.gz",
+      "entries": 6,
+      "bytes": 8580
+    },
+    {
+      "group": "extra",
+      "name": "martial_abilities",
+      "path": "data/official/extra-martial_abilities.json.gz",
+      "entries": 9,
+      "bytes": 16537
+    },
+    {
+      "group": "extra",
+      "name": "essence_sources",
+      "path": "data/official/extra-essence_sources.json.gz",
+      "entries": 155,
+      "bytes": 685426
+    },
+    {
+      "group": "extra",
+      "name": "spawners",
+      "path": "data/official/extra-spawners.json.gz",
+      "entries": 1145,
+      "bytes": 556610
+    }
+  ]
+}

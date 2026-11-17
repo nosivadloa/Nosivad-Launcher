@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Official Game Data - Nosivad Wiki</title><link rel="stylesheet" href="assets/site.css"></head>
+<body><header class="site-header"><div class="header-inner"><div class="brand"><div class="brand-mark">N</div><div><h1>Nosivad Knowledge Base</h1><p>Magic schools and spellbooks</p></div></div><div class="search"><input data-search placeholder="Search the wiki"></div></div></header><div class="search-results" data-search-results><div class="search-results-inner" data-search-list></div></div>
+<main class="layout"><aside class="sidebar"><nav class="nav-panel" aria-label="Knowledge Base categories"><h2>Browse Guides</h2>
+      <div class="nav-group"><h3>Start Here</h3><a data-nav href="index.html">Knowledge Base Home</a><a data-nav href="getting-started.html">Getting Started</a><a data-nav href="reference.html">Commands and Quick Reference</a></div>
+      <div class="nav-group"><h3>Character</h3><a data-nav href="adventurer-levels.html">Adventurer Progress</a><a data-nav href="skills-stats.html">Skills and Stats</a><a data-nav href="magic.html">Magic Schools and Spellbooks</a><a data-nav href="armory.html">Weapons and Abilities</a><a data-nav href="vocation-renown.html">Gathering and Crafting Progress</a></div>
+      <div class="nav-group"><h3>World and Adventure</h3><a data-nav href="rifts.html">Planar Rifts</a><a data-nav href="breach-gates.html">Rift Breach</a><a data-nav href="regional-events.html">Regional Events</a><a data-nav href="world-bosses.html">World Bosses</a><a data-nav href="creatures.html">Creatures and Enemies</a><a data-nav href="taming-pets.html">Taming and Pets</a><a data-nav href="shrines-lore.html">Shrines and Lore</a><a data-nav href="story-discovery.html">Story and Discovery</a><a data-nav href="bounties.html">Bounty Boards</a></div>
+      <div class="nav-group"><h3>Crafting and Community</h3><a data-nav href="professions-crafting.html">Professions and Crafting</a><a data-nav href="loot-relics.html">Loot and Relics</a><a data-nav href="housing-mounts.html">Housing, Storage and Mounts</a><a data-nav href="player-marketplace.html">Player Marketplace</a><a data-nav href="renown-bards.html">Renown and Bards</a></div>
+      <div class="nav-group"><h3>Game Reference</h3><a data-nav href="game-reference.html">Reference Library</a><a data-nav href="official-data.html">Full Official Data</a><a data-nav href="skills-reference.html">All Skills</a><a data-nav href="spell-reference.html">All Spells</a><a data-nav href="abilities-reference.html">Abilities</a><a data-nav href="crafting-reference.html">Crafting Recipes</a><a data-nav href="equipment-reference.html">Equipment</a><a data-nav href="items-reference.html">Items and Resources</a><a data-nav href="item-sources-reference.html">Item Sources</a><a data-nav href="enchanting-reference.html">Enchanting</a><a data-nav href="creatures-reference.html">Creature Catalog</a><a data-nav href="spawners-reference.html">Creature Spawns</a><a data-nav href="essences-reference.html">Essences</a><a data-nav href="quests-reference.html">Quests</a><a data-nav href="housing-reference.html">Housing Blueprints</a><a data-nav href="combat-reference.html">Combat Stats</a><a data-nav href="regions-reference.html">Regions and Maps</a></div><div class="nav-group"><h3>Shard News</h3><a data-nav href="recent-updates.html">Recent Changes</a><a data-nav href="roadmap.html">Roadmap</a></div>
+    </nav></aside>
+<section class="content"><article class="article"><h2>Official Game Data</h2><p class="lead">Explore the complete installed Legends of Aria: Eternal Knowledge Base records behind the player guides.</p><p>Choose a category, search its entries, and open a record for every source field. The authored <a href="game-reference.html">Game Reference Library</a> explains the mechanics in plain language; this explorer preserves the base game's full data, including item-source details, creature fields, quests, recipes, and region boundaries. Nosivad changes are explained in the guides and may override a base value.</p><label for="data-category">Category</label><select id="data-category"></select><p id="data-status" aria-live="polite"></p><label for="data-search">Search this category</label><input id="data-search" type="search" placeholder="Type a name or term"><div id="data-results"></div><pre id="data-detail" style="white-space:pre-wrap;overflow-wrap:anywhere"></pre></article></section></main><footer class="site-footer">Nosivad Wiki</footer><script src="assets/site.js"></script><script>
+(async function(){
+  const category=document.getElementById('data-category'), query=document.getElementById('data-search'), status=document.getElementById('data-status'), results=document.getElementById('data-results'), detail=document.getElementById('data-detail');
+  const manifest=await (await fetch('data/official/manifest.json')).json();
+  const names=manifest.categories;
+  for(const item of names){const opt=document.createElement('option');opt.value=item.path;opt.textContent=item.group+' / '+item.name+' ('+item.entries+')';category.append(opt)}
+  let rows=[];
+  async function load(){
+    const item=names.find(x=>x.path===category.value);if(!item)return;
+    status.textContent='Loading '+item.name+'…';results.replaceChildren();detail.textContent='';query.value='';
+    if(typeof DecompressionStream==='undefined'){status.textContent='This browser cannot open compressed game data. Download the category file from '+item.path;return}
+    const response=await fetch(item.path);if(!response.ok){status.textContent='Could not load '+item.name;return}
+    const raw=await new Response(response.body.pipeThrough(new DecompressionStream('gzip'))).text();
+    const data=JSON.parse(raw);
+    if(Array.isArray(data))rows=data;
+    else if(Array.isArray(data.sources))rows=data.sources;
+    else if(Array.isArray(data[item.name]))rows=data[item.name];
+    else if(Array.isArray(data.essences))rows=data.essences;
+    else if(Array.isArray(data.spawners))rows=data.spawners;
+    else rows=Object.entries(data).map(([key,value])=>({key,value}));
+    status.textContent=rows.length+' records. Search to narrow the list; open a result to inspect every field.';
+    render();
+  }
+  function label(row,i){return row.display_name||row.name||row.item_name||row.region_name||row.recipe_name||row.spell_key||row.skill_key||row.command||row.key||row.template_name||('Record '+(i+1))}
+  function render(){const q=query.value.trim().toLowerCase();results.replaceChildren();detail.textContent='';let shown=0,total=0;for(let i=0;i<rows.length;i++){let row=rows[i];if(q&&!JSON.stringify(row).toLowerCase().includes(q))continue;total++;if(shown>=60)continue;shown++;const button=document.createElement('button');button.type='button';button.className='button-link';button.style.margin='4px';button.textContent=label(row,i);button.addEventListener('click',()=>{detail.textContent=JSON.stringify(row,null,2);detail.scrollIntoView({block:'nearest'})});results.append(button)}status.textContent=total+' matching records; showing first '+shown+'.'+(total>shown?' Refine the search to see more.':'')}
+  let timer;query.addEventListener('input',()=>{clearTimeout(timer);timer=setTimeout(render,180)});category.addEventListener('change',load);await load();
+})().catch(error=>{document.getElementById('data-status').textContent='Data could not be loaded: '+error.message});
+</script></body></html>
