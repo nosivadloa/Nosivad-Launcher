@@ -23,7 +23,18 @@ const pages = [
   ["player-marketplace.html", "Player Marketplace", "Regional buy and sell orders"],
   ["reference.html", "Commands and Quick Reference", "Player commands and common terms"],
   ["recent-updates.html", "Recent Changes", "Player-facing changes that are live"],
-  ["roadmap.html", "Roadmap", "Broad development directions"]
+  ["roadmap.html", "Roadmap", "Broad development directions"]  ["game-reference.html","Game Reference Library","Skills, spells, abilities, recipes, creatures, items, quests, maps"],
+  ["skills-reference.html","All Skills","47 skills with effects and primary stats"],
+  ["spell-reference.html","All Spells","139 spell and song entries with schools, effects, circles and mana"],
+  ["abilities-reference.html","Abilities","Combat and profession abilities"],
+  ["crafting-reference.html","Crafting Recipes","Skills, materials and recipes"],
+  ["equipment-reference.html","Equipment","Weapons, armor and equipment roles"],
+  ["items-reference.html","Items and Resources","Items and crafting materials"],
+  ["creatures-reference.html","Creature Catalog","Creatures, health, attack, armor"],
+  ["quests-reference.html","Quests","Quest objectives and requirements"],
+  ["housing-reference.html","Housing Blueprints","House requirements and properties"],
+  ["combat-reference.html","Combat Stats","Combat stats and effects"],
+  ["regions-reference.html","Regions and Maps","Named regions and maps"],
 ];
 
 function currentFile() {
