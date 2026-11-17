@@ -28,6 +28,7 @@
     else if(Array.isArray(data[item.name]))rows=data[item.name];
     else if(Array.isArray(data.essences))rows=data.essences;
     else if(Array.isArray(data.spawners))rows=data.spawners;
+    else if(typeof data==='string')rows=[{value:data}];
     else rows=Object.entries(data).map(([key,value])=>({key,value}));
     status.textContent=rows.length+' records. Search to narrow the list; open a result to inspect every field.';
     render();
