@@ -1,5 +1,6 @@
 const pages = [
   ["index.html", "Home", "Nosivad overview, shard goals, quick links"],
+  ["whats-new.html", "What's New", "Recent magic, crafting, inventory, rune, and Necromancy updates"],
   ["getting-started.html", "Getting Started", "Eldeir Village, first hour, guide, starter bounties"],
   ["adventurer-levels.html", "Adventurer Levels", "Player levels, public grades, XP sources"],
   ["skills-stats.html", "Skills and Stats", "Skill and stat caps, vitality, crafting and smelting"],

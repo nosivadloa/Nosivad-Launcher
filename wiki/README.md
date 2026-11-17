@@ -7,6 +7,7 @@ Open `index.html` in a browser to preview it locally. The site can later be copi
 ## Structure
 
 - `index.html` - wiki landing page
+- `whats-new.html` - recent live shard updates
 - `getting-started.html` - first-hour guide for Eldeir Village
 - `adventurer-levels.html` - player levels and grades
 - `skills-stats.html` - skill and stat caps, vitality, and crafting
